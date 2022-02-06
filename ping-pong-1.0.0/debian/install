@@ -1,0 +1,4 @@
+ping-pong usr/bin/
+ping-pong.1 usr/share/man/man1/
+ping-pong.svg usr/share/pixmaps/
+ping-pong.desktop usr/share/applications/

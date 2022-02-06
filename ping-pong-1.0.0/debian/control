@@ -1,0 +1,13 @@
+Source: ping-pong
+Section: python
+Maintainer: Peace Cyebukayire <peacecyebukayire@gmail.com>
+Build-Depends: debhelper (>= 7),
+               python3 (>= 3.8),
+Standards-Version: 4.5.1
+Priority: optional
+
+Package: ping-pong
+Architecture: all
+Section: python
+Depends: python3 (>=3.8), ${misc:Depends}
+Description: A wonderful ping-pong program to help people have fun during their leisure time.

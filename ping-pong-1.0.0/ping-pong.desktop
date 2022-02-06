@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Name=Ping Pong
+Comment=Ping Pong game
+Exec=/usr/bin/ping-pong
+Icon=ping-pong
+Type=Application
+StartupNotify=true
+Terminal=false
+StartupWMClass=ping-pong
+Categories=Games;Entertainment;
+Keywords=ping;pingpong;ping-pong;games;play;

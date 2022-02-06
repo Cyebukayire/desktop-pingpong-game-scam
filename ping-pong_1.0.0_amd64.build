@@ -1,0 +1,25 @@
+ dpkg-buildpackage -us -uc -ui -T clean
+dpkg-buildpackage: info: source package ping-pong
+dpkg-buildpackage: info: source version 1.0.0
+dpkg-buildpackage: info: source distribution unstable
+dpkg-buildpackage: info: source changed by Peace Cyebukayire <peacecyebukayire@gmail.com>
+ fakeroot debian/rules clean
+dh clean
+   dh_clean
+Now running lintian ping-pong_1.0.0_amd64.changes ...
+E: ping-pong changes: bad-distribution-in-changes-file unstable
+E: ping-pong: extended-description-is-empty
+W: ping-pong: description-synopsis-starts-with-article
+W: ping-pong: description-too-long
+W: ping-pong: desktop-entry-invalid-category Entertainment usr/share/applications/ping-pong.desktop
+W: ping-pong: desktop-entry-invalid-category Games usr/share/applications/ping-pong.desktop
+W: ping-pong: desktop-entry-lacks-main-category usr/share/applications/ping-pong.desktop
+W: ping-pong source: newer-standards-version 4.5.1 (current is 4.5.0)
+W: ping-pong source: no-newline-at-end debian/changelog
+W: ping-pong source: no-newline-at-end debian/control
+Finished running lintian.
+Now signing changes and any dsc files...
+ signfile dsc ping-pong_1.0.0.dsc Peace Cyebukayire <peacecyebukayire@gmail.com>
+gpg: skipped "Peace Cyebukayire <peacecyebukayire@gmail.com>": No secret key
+gpg: /tmp/debsign.8yqUdidh/ping-pong_1.0.0.dsc: clear-sign failed: No secret key
+debsign: gpg error occurred!  Aborting....
